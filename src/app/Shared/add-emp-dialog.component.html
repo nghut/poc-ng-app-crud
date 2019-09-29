@@ -1,0 +1,85 @@
+<h1 mat-dialog-title>Employee name <small style="font-size: smaller; font-weight: 300;"> {{data.EmployeeName}}
+        ({{data.EmployeeID}}) </small></h1>
+<div mat-dialog-content>
+    <mat-grid-list cols="3" rowHeight="2:1">
+        <mat-grid-tile>
+            <mat-form-field appearance="standard">
+                <mat-label>Employee name</mat-label>
+                <input matInput placeholder="Employee name" [(ngModel)]="data.EmployeeName">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-form-field appearance="standard">
+                <mat-label>Date Of birth</mat-label>
+                <input disabled matInput placeholder="Date Of birth" [(ngModel)]="data.DateOfBirth">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-form-field appearance="standard">
+                <mat-label>Age</mat-label>
+                <input type="number" step="1" min="5" max="100" matInput placeholder="Age" [(ngModel)]="data.Age">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-form-field appearance="standard">
+                <mat-label>EmailID</mat-label>
+                <input matInput placeholder="EmailID" [(ngModel)]="data.EmailID">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-form-field appearance="standard">
+                <mat-label>Mobile number</mat-label>
+                <input matInput placeholder="Mobile number" [(ngModel)]="data.MobileNumber">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+                <mat-form-field appearance="standard">
+                    <mat-label>Address</mat-label>
+                    <input matInput placeholder="Address" [(ngModel)]="data.Address">
+                    <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                    <!-- <mat-hint>Hint</mat-hint> -->
+                </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-form-field appearance="standard">
+                <mat-label>City</mat-label>
+                <input matInput placeholder="City" [(ngModel)]="data.City">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-form-field appearance="standard">
+                <mat-label>State</mat-label>
+                <input matInput placeholder="State" [(ngModel)]="data.State">
+                <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+
+
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onClickCloseDialog()">Cancel</button>
+    <button mat-button (click)="onClickUpdateEmployee(data)">Submit</button>
+    <!-- <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Submit</button> -->
+</div>
